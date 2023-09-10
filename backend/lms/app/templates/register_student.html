@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+</head>
+<body>
+    <h1>Student Registration</h1>
+    <form method="post" action = "/register_student/">
+        {% csrf_token %}
+        <label for="id_username">Username:</label>
+        {{ form.username }}
+        <br>
+        <label for="id_email">Email:</label>
+        {{ form.email }}
+        <br>
+        <label for="id_password1">Password:</label>
+        {{ form.password1 }}
+        <br>
+        <label for="id_password2">Confirm Password:</label>
+        {{ form.password2 }}
+        <br>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
